@@ -1,16 +1,13 @@
-package stringPracticeProgram6;
+package stringPracticeProgramTest7;
 
-public class CountOccurenceOfCharacterFromGivenString {
+public class CountTheNumberOfCharacterRepeatedTest {
 	public static void main(String[] args) {
-		String str="MALAYALAM IS A LANGUAGE";
-		String str1 = str.replace(" ", "");
-		//System.out.println(str1);
-//		char[] ch = str1.toCharArray();
-		int [] ch= {1,4,5,2,1,3,4,5,2,4,1,2,5};
+		String str="MALAYALAM";
+		char[] ch = str.toCharArray();
 		int size = ch.length;
 		for (int i = 0; i < size; i++) {
 			int count=1;
-			for (int j = i+1; j < size ; j++) {
+			for (int j = i+1; j < size; j++) {
 				if (ch[i]==ch[j]) {
 					count++;
 					int k=j;
