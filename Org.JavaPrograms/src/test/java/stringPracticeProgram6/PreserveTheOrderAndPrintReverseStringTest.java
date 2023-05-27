@@ -2,31 +2,37 @@ package stringPracticeProgram6;
 
 public class PreserveTheOrderAndPrintReverseStringTest {
 	public static void main(String[] args) {
-		String str="My Name is Shubham";
-		char[] inputArray = str.toCharArray();
-		char [] outputArray= new char[inputArray.length];
-		// So wherever the Space are there in str store that space inside
-		for (int i = 0; i < inputArray.length; i++) {
-			if (inputArray[i]==' ') {
-				outputArray[i]=inputArray[i];
+		String str="S*h#u@b%ha$m#";//"My Name is Shubham";
+		char[] temp = str.toCharArray();
+		//Create the Empty Array size as same as Temp Array
+		char [] dest= new char[temp.length];
+		
+		//Add Space same space as it is available inside the temp array
+		for (int i = 0; i < temp.length; i++) {
+			if (temp[i]=='*'||temp[i]=='#'||temp[i]=='@'||temp[i]=='%'||temp[i]=='$') {
+				dest[i]=temp[i];
 			}
 		}
-		//We have to store inputArray in reverse order
-		int size = outputArray.length-1;
 		
-		for (int i = 0; i < inputArray.length; i++) {
-			if (inputArray[i]!=' ') {
-				if(outputArray[size]==' ') {
+		//To store elements of temp array inside the dest array
+		try {
+			int size= dest.length-1;
+			for (int i = 0; i < temp.length; i++) {
+				
+				if(temp[i]!='*'||temp[i]!='#'||temp[i]!='@'||temp[i]!='%'||temp[i]!='$') {
 					size--;
 				}
-				outputArray[size]=inputArray[i];
+				dest[size]=temp[i];
 				size--;
 			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
 		}
 		
-		// To print the outputArray
-		for (int i = 0; i < outputArray.length; i++) {
-			System.out.print(outputArray[i]);
+		//Print the dest Array or Print the O/P
+		for (int i = 0; i < dest.length; i++) {
+			System.out.print(dest[i]);
 		}
 	}
 }

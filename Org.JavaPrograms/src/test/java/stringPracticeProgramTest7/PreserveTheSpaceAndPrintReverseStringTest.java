@@ -3,6 +3,7 @@ package stringPracticeProgramTest7;
 public class PreserveTheSpaceAndPrintReverseStringTest {
 	public static void main(String[] args) {
 		String str="My Name Is Shubham";
+		//String str2="pit16@gmail.com";
 		char[] chInput = str.toCharArray();
 		char[] chOutput= new char[chInput.length];
 		//Create a loop to add space as it is inside ChOutput Array
