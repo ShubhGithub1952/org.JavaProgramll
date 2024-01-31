@@ -27,6 +27,7 @@ public class CheckTheStringisAnagramOrNot {
 				}
 			}
 		}
+
 		if (ch1.length==ch2.length) {
 			length1 = ch1.length;
 		}

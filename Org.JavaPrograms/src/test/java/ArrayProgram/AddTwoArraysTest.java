@@ -18,6 +18,5 @@ public class AddTwoArraysTest {
 		for (int i = 0; i < dumb.length; i++) {
 			System.out.print(dumb[i]+",");
 		}
-		
 	}
 }
